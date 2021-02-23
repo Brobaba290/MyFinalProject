@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class IEntity
+    public interface IEntity
     {
 
 

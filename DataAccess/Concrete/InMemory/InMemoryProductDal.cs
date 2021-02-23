@@ -3,10 +3,12 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Concrete.InMemory
 {
+    /*
     public class InMemoryProductDal : IProductDal
     {
 
@@ -26,6 +28,11 @@ namespace DataAccess.Concrete.InMemory
             _products.Add(product);
         }
 
+        public void Add(Category entitiy)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Product product)
         {
             Product productToDelete /* = null;
@@ -36,14 +43,29 @@ namespace DataAccess.Concrete.InMemory
                     productToDelete = p;
                 }
             }
-
-            productToDelete */ = _products.SingleOrDefault(p =>p.ProductId == product.ProductId);
+    
+            productToDelete  = _products.SingleOrDefault(p =>p.ProductId == product.ProductId);
             _products.Remove(productToDelete);
         }
-       
+
+        public void Delete(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Category Get(Expression<Func<Category, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Product> GetAll()
         {
             return _products;
+        }
+
+        public List<Category> GetAll(Expression<Func<Category, bool>> filter = null)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Product> GetAllByCategory(int categoryId)
@@ -60,5 +82,15 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.UnitsInStock = product.UnitsInStock;
 
         }
-    }
+
+        public void Update(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Category> IEntitityRepository<Category>.GetAllByCategory(int categoryId)
+        {
+            throw new NotImplementedException();
+        } 
+    } */
 }

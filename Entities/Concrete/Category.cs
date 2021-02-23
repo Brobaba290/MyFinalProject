@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-   public class Category
+    public class Category : IEntity
     {
 
         public int CategoryId { get; set; }
